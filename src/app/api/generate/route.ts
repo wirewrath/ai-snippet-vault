@@ -85,7 +85,7 @@ async function generateTagsWithGroq(content: string) {
   const prompt = `Analyze this code or prompt and return exactly 3 highly relevant technology tags in JSON format as {"tags":["tag1","tag2","tag3"]}. Keep tags short and technical. Source text:\n${content}`;
 
   const response = await client.chat.completions.create({
-    model: "llama-3.3-70b-versatile",
+    model: 'llama-3.1-8b-instant',
     messages: [
       {
         role: "system",
