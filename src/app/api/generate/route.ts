@@ -81,7 +81,7 @@ async function generateTagsWithGroq(content: string) {
   }
 
   const client = new Groq({ apiKey });
-  const model = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
+  const model = process.env.GROQ_MODEL || "openai/gpt-oss-20b";
 
   const prompt = `Analyze this code or prompt and return exactly 3 highly relevant technology tags in JSON format as {"tags":["tag1","tag2","tag3"]}. Keep tags short and technical. Source text:\n${content}`;
 
