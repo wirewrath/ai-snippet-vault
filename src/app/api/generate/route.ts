@@ -96,8 +96,7 @@ async function generateTagsWithGroq(content: string) {
       { role: "user", content: prompt },
     ],
     temperature: 0.35,
-    max_tokens: 160,
-    response_format: { type: "json_object" },
+    max_tokens: 256,
   });
 
   const raw = response.choices[0]?.message?.content ?? "";
