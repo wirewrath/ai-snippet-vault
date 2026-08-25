@@ -1,32 +1,42 @@
 # ⚡ AI Snippet Vault
 
-An AI-native full-stack application that organizes code snippets using LLM classification.
+[AI Snippet Vault](https://ai-snippet-vault.vercel.app/) is a developer workspace built with Next.js, Supabase, and Groq AI. It allows developers to store, automatically organize, and retrieve reusable code snippets, AI system prompts, and technical notes.
 
-## Getting Started
+---
 
-Install dependencies and start the development server:
+## ✨ Features
 
-```bash
-npm install
-npm run dev
-```
+* **🤖 AI Auto-Tagging:** Automatically analyzes code snippets or prompt templates using Groq LLMs (`llama-3.3-70b-versatile`) to extract relevant tags (e.g., `#Python`, `#Algorithms`, `#Product Design`).
+* **☁️ Supabase Synchronization:** Syncs saved items to a Supabase Postgres database backend for cloud persistent storage across devices.
+* **🏷️ Dual Source Types:** Organizes entries into dedicated **Snippet** and **Prompt** categories.
+* **⚡ Modern Next.js Stack:** Built with Next.js App Router for fast performance and instant UI updates.
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-Create a `.env.local` file from `.env.example` and set `GROQ_API_KEY`. The
-default model is `openai/gpt-oss-20b`; set `GROQ_MODEL` if your Groq
-account uses a different currently available model. After changing these
-variables in Vercel, redeploy the application.
+---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** Next.js (App Router), TypeScript, Tailwind CSS
-- **Backend & Database:** Supabase (PostgreSQL), Next.js API Routes
-- **AI Integration:** Groq API (`llama-3.3-70b-versatile`)
-- **Deployment:** Vercel
+* **Framework:** [Next.js](https://nextjs.org/) (React / TypeScript)
+* **Database:** [Supabase](https://supabase.com/) (PostgreSQL)
+* **AI Provider:** [Groq Cloud](https://groq.com/) (Llama 3.3 70B Versatile)
+* **Deployment:** [Vercel](https://vercel.com/)
 
-## ✨ Key Features
+---
 
-- **Instant AI Tagging:** Sends code snippets to Groq API to automatically extract relevant tech tags (`#Python`, `#Database`, etc.).
-- **Persisted Storage:** Real-time database insertion and retrieval via Supabase.
-- **Sleek UI:** Dark-mode dashboard built for fast developer workflow.
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed:
+* Node.js (v18 or higher)
+* npm, yarn, or pnpm
+* A [Supabase](https://supabase.com/) project
+* A [Groq API Key](https://console.groq.com/)
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory and add the following keys:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=[https://your-project.supabase.co](https://your-project.supabase.co)
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+GROQ_API_KEY=gsk_your_groq_api_key
